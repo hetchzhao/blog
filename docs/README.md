@@ -2,7 +2,6 @@
     <ol>
         <li v-for="(item, index) in list" :key="index" @click="go(item)">
             <!--匹配当前文章所属栏目-->
-            <span class="dir">{{ nav[item.dir] }} /</span>
             <span class="tit">{{ item.title }}</span>
             <span class="date">{{ item.frontmatter.updateTime }}</span>
             <div class="intro" v-if="item.excerpt" v-html="item.excerpt"></div>
