@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs --dest dist",
+    "docs:dev": "vuepress dev",
+    "docs:build": "vuepress build --dest dist",
     "deploy": "GH=1 npm run docs:build && bash deploy.sh",
     "commit": "cz"
   },
@@ -17,6 +17,13 @@
     "cz-conventional-changelog": "^3.2.0",
     "lerna": "^4.0.0",
     "vuepress": "^1.8.2"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss7-compat": "^2.2.4",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.36",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4",
+    "vuetify": "^2.5.6"
   },
   "config": {
     "commitizen": {

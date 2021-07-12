@@ -18,3 +18,7 @@ export default {
   name: 'Nav',
 }
 </script>
+
+<style lang="stylus" scoped>
+@import '../styles/tailwind.styl';
+</style>

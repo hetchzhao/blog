@@ -1,5 +1,5 @@
-import Vuetify from './node_modules/vuetify/dist/vuetify'
-import './node_modules/vuetify/dist/vuetify.css'
+import Vuetify from 'vuetify/dist/vuetify'
+import 'vuetify/dist/vuetify.css'
 
 export default ({
   Vue,
