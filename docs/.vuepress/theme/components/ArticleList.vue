@@ -3,22 +3,14 @@
     <v-list>
       <v-list-item>
         <v-card
-          class="mb-16 elevation-0"
+          class="mb-8 elevation-0"
           rounded="false"
           flat
           link
         >
-          <v-list-item>
-            <v-list-item-avatar color="grey"></v-list-item-avatar>
-            <v-list-item-content>
-              <v-list-item-title>Our Changing Planet</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
           <div class="d-flex flex-no-wrap justify-space-between">
             <div>
-              <v-card-title
-                class="headline"
-              >Write better HTML in 2021: the tips and tags you didn’t know you wanted</v-card-title>
+              <v-card-title class="headline">Write better HTML in 2021: the tips and tags you didn’t know you wanted</v-card-title>
               <v-card-subtitle>
                 <div>
                   Newer tags, lots of tips and good practices on how to improve your HTML knowledge to write a better code

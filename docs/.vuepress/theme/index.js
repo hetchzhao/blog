@@ -10,21 +10,21 @@ module.exports = (themeConfig, ctx) => {
       path.resolve(__dirname, 'enhanceApp.js'),
     ],
     extendPageData($page) {
-      const ensureBothSlash = str => str.replace(/^\/?(.*)\/?$/, '/$1/')
+      // const ensureBothSlash = str => str.replace(/^\/?(.*)\/?$/, '/$1/')
 
 
       // console.log($page.path);
     },
     async ready () {
 
-      console.log('isProd', ctx.isProd);
+      // console.log('isProd', ctx.isProd);
 
-      await ctx.addPage({
-        permalink: '/',
-        frontmatter: {
-          layout: 'Detail',
-        }
-      })
+      // await ctx.addPage({
+      //   permalink: '/',
+      //   frontmatter: {
+      //     layout: 'Detail',
+      //   }
+      // })
     }
   }
 }
