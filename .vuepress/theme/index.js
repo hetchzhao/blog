@@ -1,6 +1,16 @@
 const path = require('path')
 
-
+const routeRules = [{
+  match: (path) => path === '/',
+  package: (page) => {
+    page.frontmatter.layout = 'BlogIndex'
+  }
+},{
+  match: (path) => /\/(.*\/)?.*\.html$/.test(path),
+  package: (page) => {
+    page.frontmatter.layout = 'BlogPost'
+  }
+}];
 
 module.exports = (themeConfig, ctx) => {
   return {
@@ -9,22 +19,22 @@ module.exports = (themeConfig, ctx) => {
     enhanceAppFiles: [
       path.resolve(__dirname, 'enhanceApp.js'),
     ],
-    extendPageData($page) {
-      // const ensureBothSlash = str => str.replace(/^\/?(.*)\/?$/, '/$1/')
+    extendPageData(page) {
+      const { regularPath } = page;
 
-
-      // console.log($page.path);
+      for(let i = 0; i < routeRules.length; i++) {
+        if(routeRules[i].match(regularPath)) {
+          routeRules[i].package(page)
+          break;
+        }
+      }
     },
     async ready () {
+      const homePage = ctx.pages.filter(page => page && page.regularPath === '/');
 
-      // console.log('isProd', ctx.isProd);
-
-      // await ctx.addPage({
-      //   permalink: '/',
-      //   frontmatter: {
-      //     layout: 'Detail',
-      //   }
-      // })
+      if(homePage.length === 0) {
+        await ctx.addPage({ permalink: '/' })
+      }
     }
   }
 }

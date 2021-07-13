@@ -2,6 +2,7 @@
 title: 语义化版本(SemVer)
 date: 2021-6-14
 categories: 
+layout: Post
 tags: 
 summary: 在软件管理的领域里存在着被称作“依赖地狱”的死亡之谷，系统规模越大，加入的包越多，你就越有可能在未来的某一天发现自己已深陷绝望之中。
 ---

@@ -1,12 +1,7 @@
 <template>
-  <v-app>
-    <Header />
-    <v-main>
-      <v-container>
-        <Content />
-      </v-container>
-    </v-main>
-  </v-app>
+  <div>
+    <Content />
+  </div>
 </template>
 
 <script>

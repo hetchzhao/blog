@@ -1,30 +1,41 @@
 <template>
-  <v-app>
-    <Header />
-    <v-main class="pl-8 pr-8">
-      <v-row>
-        <v-col cols="12" sm="8">
-          <ArticleList />
-        </v-col>
-        <v-col cols="12" sm="4">
-
-        </v-col>
-      </v-row>
-    </v-main>
-  </v-app>
+  <div class="d-flex justify-center">
+    <div class="d-flex mx-16">
+      <div class="flex">
+        <BlogList :posts="posts" />
+      </div>
+    </div>
+    <v-divider class="ml-16 mr-16" vertical/>
+    <div class="side">
+      <div>
+        <div class="pt-8">
+          <Nav/>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import Header from '../components/Header'
-import ArticleList from '../components/ArticleList'
-// import SideBar from '../components/SideBar'
+import BlogList from '../components/BlogList'
+import Nav from '../components/Nav'
 
 export default {
-  name: '',
+  name: 'BlogIndex',
   components: {
-    Header,
-    ArticleList,
-    // SideBar
+    BlogList,
+    Nav
+  },
+  computed: {
+    posts() {
+      return this.$site.pages.filter(page => page.regularPath !== '/')
+    }
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.side {
+  width: 365px;
+}
+</style>
