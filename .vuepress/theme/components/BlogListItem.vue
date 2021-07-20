@@ -1,32 +1,43 @@
 <template>
-  <v-card
-    class="mb-8 elevation-0"
-    rounded="false"
-    flat
-    link
-    :to="path"
-  >
-    <div class="d-flex flex-no-wrap justify-space-between">
-      <div>
-        <v-card-title class="headline">{{title}}</v-card-title>
-        <v-card-subtitle>
-          <div>{{summary}}</div>
-          <div>
-            <span>Nov 13, 2018</span>
-            <span>·</span>
-            <span>5 min read</span>
+  <div class="flex flex-auto items-center justify-between box-border">
+    <div :class="contexntClass">
+      <router-link class="m-0 p-0" :to="path">
+        <h2 class="text-2xl font-bold overflow-hidden overflow-ellipsis">
+          {{title}}
+        </h2>
+        <div class="block pt-1">
+          <h3 class="overflow-ellipsis overflow-hidden text-base font-normal">
+            {{summary}}
+          </h3>
+        </div>
+      </router-link>
+      <div class="flex items-baseline justify-between pt-2">
+        <div class="flex items-center min-w-0">
+          <div class="whitespace-nowrap">
+            <span class="text-sm font-normal">Jul 16</span>
           </div>
-        </v-card-subtitle>
+          <div class="relative h-full px-3">
+            <span>·</span>
+          </div>
+          <div class="whitespace-nowrap">
+            <span class="text-sm font-normal">8 min read</span>
+          </div>
+          <div class="relative h-full px-3">
+            <span>·</span>
+          </div>
+          <router-link class="m-0 p-0" to="#">
+            <div class="relative py-1 px-2 bg-gray-100 rounded-3xl">
+              <span>Life</span>
+            </div>
+          </router-link>
+        </div>
+        <div></div>
       </div>
-      <v-avatar
-        class="ma-3"
-        size="125"
-        tile
-      >
-        <v-img src="https://cdn.vuetifyjs.com/images/lists/1.jpg"></v-img>
-      </v-avatar>
     </div>
-  </v-card>
+    <a v-if="hasCover" class="m-0 p-0" :to="path">
+      <img width="200" height="134" :src="coverSrc" />
+    </a>
+  </div>
 </template>
 
 <script>
@@ -44,8 +55,37 @@ export default {
     path: {
       type: String,
       default: ''
+    },
+    coverSrc: {
+      type: String,
+      default: ''
+    }
+  },
+  data() {
+    return {
+
+    }
+  },
+  computed: {
+    hasCover() {
+      return this.coverSrc !== ''
+    },
+    contexntClass() {
+      const arr = ['block','min-w-0', 'w-full'];
+
+      if(this.hasCover) {
+        arr.push('mr-5');
+      }
+
+      return arr.join(' ');
     }
   }
 }
 </script>
+
+<style scoped>
+.mr20 {
+  margin-right: 20px;
+}
+</style>
 

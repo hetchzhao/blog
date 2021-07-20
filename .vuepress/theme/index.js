@@ -15,7 +15,15 @@ const routeRules = [{
 module.exports = (themeConfig, ctx) => {
   return {
     name: 'vuepress-theme-hetch',
-    plugins: [],
+    plugins: [
+      require('./plugins/vuepress-medium-plugin.js')
+    ],
+    postcss: {
+      plugins: [
+        require('tailwindcss'),
+        require('autoprefixer')
+      ]
+    },
     enhanceAppFiles: [
       path.resolve(__dirname, 'enhanceApp.js'),
     ],

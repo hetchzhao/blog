@@ -1,5 +1,7 @@
-import Vuetify from 'vuetify/dist/vuetify'
-import 'vuetify/dist/vuetify.css'
+import Page from './components/Page'
+import Header from './components/Header'
+import Main from './components/Main'
+
 
 export default ({
   Vue,
@@ -7,7 +9,7 @@ export default ({
   router,
   siteData
 }) => {
-
-  Vue.use(Vuetify)
-  options.vuetify= new Vuetify({})
+  Vue.component('Page', Page)
+  Vue.component('Header', Header)
+  Vue.component('Main', Main)
 }

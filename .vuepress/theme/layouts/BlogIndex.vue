@@ -1,15 +1,25 @@
 <template>
-  <div class="d-flex justify-center">
-    <div class="d-flex mx-16">
+  <div class="flex justify-center">
+    <div class="w-full max-w-screen-lg min-w-0 mx-16">
       <div class="flex">
-        <BlogList :posts="posts" />
-      </div>
-    </div>
-    <v-divider class="ml-16 mr-16" vertical/>
-    <div class="side">
-      <div>
-        <div class="pt-8">
-          <Nav/>
+        <div class="block flex-1">
+          <div class="block">
+            <div class="block mt-8">
+              <div class="block">
+                <BlogList :posts="posts" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block min-h-screen mx-14 border-r divide-gray-300"></div>
+        <div class="block w-80">
+          <div class="sticky mt-0">
+            <div class="block pt-8">
+              <div class="block pb-10 border-b border-gray-200">
+                <Topics />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -18,24 +28,31 @@
 
 <script>
 import BlogList from '../components/BlogList'
-import Nav from '../components/Nav'
+import Topics from '../components/Topics'
 
 export default {
   name: 'BlogIndex',
   components: {
     BlogList,
-    Nav
+    Topics
   },
   computed: {
     posts() {
-      return this.$site.pages.filter(page => page.regularPath !== '/')
+      return this.$site.pages
+        .filter(page => page.regularPath !== '/')
+        .map(page => {
+          const { frontmatter, path } = page;
+
+          return {
+            path,
+            ...frontmatter,
+          }
+        })
     }
   }
 }
 </script>
 
-<style lang="stylus" scoped>
-.side {
-  width: 365px;
-}
+<style scoped>
+
 </style>

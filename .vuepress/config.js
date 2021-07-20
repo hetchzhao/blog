@@ -1,10 +1,14 @@
 const path = require('path')
 
 module.exports = {
+  alias: {
+    '@': path.resolve(__dirname, '../.vuepress/theme')
+  },
+  base: '/blog/',
   postcss: {
     plugins: [
-      require("tailwindcss")("./tailwind.config.js"),
-      require("autoprefixer"),
+      require('tailwindcss'),
+      require('autoprefixer')
     ]
   },
 }

@@ -1,15 +1,16 @@
 <template>
-  <v-container>
-    <v-list>
-      <v-list-item v-for="(post, index) in posts" :key="index">
+  <div class="block">
+    <div v-for="(post, index) in posts" :key="`POST_INDEX_${index}`" class="h-full w-full">
+      <div class="mb-12">
         <BlogListItem
-          :title="post.frontmatter.title"
-          :summary="post.frontmatter.summary"
+          :title="post.title"
+          :summary="post.summary"
           :path="post.path"
+          :coverSrc="post.coverSrc"
         />
-      </v-list-item>
-    </v-list>
-  </v-container>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>

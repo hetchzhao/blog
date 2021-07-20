@@ -1,25 +1,16 @@
 <template>
-  <v-app-bar
-    app
-    color="blue darken-3"
-    clipped-right
-    dark
-  >
-    <v-toolbar-title
-      style="width: 300px"
-    >
-      <span>Google Contacts</span>
-    </v-toolbar-title>
-    <v-spacer></v-spacer>
-    <v-btn icon large>
-      <v-avatar size="32px" item>
-        <v-img
-          src="https://cdn.vuetifyjs.com/images/logos/logo.svg"
-          alt="Vuetify"
-        />
-      </v-avatar>
-    </v-btn>
-  </v-app-bar>
+  <nav class="header">
+    <div class="flex justify-center">
+      <div class="w-full max-w-screen-lg min-w-0 mx-16 ">
+        <div class="height65 flex items-center">
+          <div class="block flex-grow flex-shrink-0 flex-basis-auto">Hetch</div>
+          <!-- <div class="block flex-grow-0 flex-shrink-0 flex-basis-auto">
+            <div class="flex justify-end items-center"></div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -28,6 +19,14 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-
+<style scoped>
+.header {
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
+}
+.height65 {
+  height: 65px;
+}
+.flex-basis-auto {
+  flex-basis: auto;
+}
 </style>

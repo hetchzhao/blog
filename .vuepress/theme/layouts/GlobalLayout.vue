@@ -1,23 +1,24 @@
 <template>
-  <v-app>
-    <Header/>
-    <v-main>
+  <Page>
+    <Header />
+    <Main>
       <component :is="layout" :key="$page.path" />
-    </v-main>
-  </v-app>
+    </Main>
+  </Page>
 </template>
 
 <script>
-import Header from '../components/Header.vue'
 import BlogPost from './BlogPost'
 import BlogIndex from './BlogIndex'
+
+import BlogList from '../components/BlogList.vue'
 
 export default {
   name: '',
   components: {
-    Header,
     BlogPost,
-    BlogIndex
+    BlogIndex,
+    BlogList
   },
   computed: {
     layout () {

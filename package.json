@@ -1,31 +1,36 @@
 {
   "name": "blog",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev",
     "build": "vuepress build --dest dist",
-    "deploy": "GH=1 npm run docs:build && bash deploy.sh",
+    "deploy": "GH=1 npm run build && bash deploy.sh",
     "commit": "cz"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vuepress/shared-utils": "^1.8.2",
+    "cheerio": "^1.0.0-rc.10",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.2.0",
-    "lerna": "^4.0.0",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^12.1.0",
+    "markdown-it-attrs": "^4.0.0",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
     "typescript": "^4.3.5",
     "vuepress": "^1.8.2",
     "vuepress-plugin-typescript": "^0.3.1"
   },
   "dependencies": {
-    "@tailwindcss/postcss7-compat": "^2.2.4",
+    "@vuepress/plugin-medium-zoom": "^1.8.2",
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.36",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4",
-    "vuetify": "^2.5.6"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
   },
   "config": {
     "commitizen": {
