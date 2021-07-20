@@ -16,14 +16,14 @@ module.exports = (themeConfig, ctx) => {
   return {
     name: 'vuepress-theme-hetch',
     plugins: [
-      require('./plugins/vuepress-medium-plugin.js')
-    ],
-    postcss: {
-      plugins: [
-        require('tailwindcss'),
-        require('autoprefixer')
+      require('./plugins/vuepress-medium-plugin.js'),
+      [
+        'vuepress-plugin-feed',
+        {
+          canonical_base: 'https://hetchzhao.github.io/blog',
+        }
       ]
-    },
+    ],
     enhanceAppFiles: [
       path.resolve(__dirname, 'enhanceApp.js'),
     ],
@@ -37,6 +37,7 @@ module.exports = (themeConfig, ctx) => {
         }
       }
     },
+    
     async ready () {
       const homePage = ctx.pages.filter(page => page && page.regularPath === '/');
 
