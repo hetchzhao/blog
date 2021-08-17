@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title></title>
+        <link>https://hetchzhao.github.io/blog</link>
+        <description></description>
+        <lastBuildDate>Tue, 17 Aug 2021 02:56:59 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+        <atom:link href="https://hetchzhao.github.io/blog/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[NodeJS系列三：API]]></title>
+            <link>https://hetchzhao.github.io/blog/docs/NodeJS%E7%B3%BB%E5%88%97%E4%B8%89%EF%BC%9AAPI.html</link>
+            <guid>https://hetchzhao.github.io/blog/docs/NodeJS%E7%B3%BB%E5%88%97%E4%B8%89%EF%BC%9AAPI.html</guid>
+            <pubDate>Sun, 15 Aug 2021 16:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[NodeJS系列二：I/O]]></title>
+            <link>https://hetchzhao.github.io/blog/docs/NodeJS%E7%B3%BB%E5%88%97%E4%BA%8C%EF%BC%9AIO.html</link>
+            <guid>https://hetchzhao.github.io/blog/docs/NodeJS%E7%B3%BB%E5%88%97%E4%BA%8C%EF%BC%9AIO.html</guid>
+            <pubDate>Sun, 15 Aug 2021 16:00:00 GMT</pubDate>
+            <description><![CDATA[I/O就是把数据从一个地方拷贝到另一个地方。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[语义化版本(SemVer)]]></title>
+            <link>https://hetchzhao.github.io/blog/docs/%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC(SemVer).html</link>
+            <guid>https://hetchzhao.github.io/blog/docs/%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC(SemVer).html</guid>
+            <pubDate>Sun, 13 Jun 2021 16:00:00 GMT</pubDate>
+            <description><![CDATA[在软件管理的领域里存在着被称作“依赖地狱”的死亡之谷，系统规模越大，加入的包越多，你就越有可能在未来的某一天发现自己已深陷绝望之中。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[NodeJS系列一：进程]]></title>
+            <link>https://hetchzhao.github.io/blog/docs/NodeJS%E7%B3%BB%E5%88%97%E4%B8%80%EF%BC%9A%E8%BF%9B%E7%A8%8B.html</link>
+            <guid>https://hetchzhao.github.io/blog/docs/NodeJS%E7%B3%BB%E5%88%97%E4%B8%80%EF%BC%9A%E8%BF%9B%E7%A8%8B.html</guid>
+            <pubDate>Sun, 15 Aug 2021 16:00:00 GMT</pubDate>
+            <description><![CDATA[在这个过程中，操作系统要给进程分配资源，这些资源包括：]]></description>
+            <enclosure url="https://hetchzhao.github.io/blog/./assets/image-20210803021534672.png">
+            </enclosure>
+        </item>
+    </channel>
+</rss>
